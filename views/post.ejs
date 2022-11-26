@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('includes/scripts-styles', { title : "posts" }) %>
+</head>
+
+<body>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID.....</th>
+                            <th>...............createdAt............................</th>
+                            <th>name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <% for(let i=0; i < posts.length; i++) { %>
+                            <!-- % only % means writing logic -->
+                            <tr>
+                                <td>
+                                    <!-- %= means ye output me print hoga -->
+                                    <%= posts[i].id %> 
+
+                                </td>
+                                <td>
+                                    <%= posts[i].createdAt %>
+                                </td>
+                                <td>
+                                    <%= posts[i].name %>
+                                </td>
+                            </tr>
+                            <% } %>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
